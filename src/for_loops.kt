@@ -16,4 +16,18 @@ fun main() {
         println(i)
     }
 
+    // nested loop
+    for (x in 1..5) {
+        for (y in 1..5) {
+            println("($x , $y)")
+        }
+    }
+
+    for (line in 1..5) {
+        for (count in 1..line) {
+            print("*")
+        }
+        println()
+    }
+
 }
