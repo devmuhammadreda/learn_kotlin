@@ -1,3 +1,5 @@
+import java.util.*
+
 fun main() {
 
     for (i in 1..10) {
@@ -29,5 +31,26 @@ fun main() {
         }
         println()
     }
+
+    for (item in 1..10) {
+        if (item % 2 == 0) continue
+        println(item)
+    }
+
+
+    for (item in 1..10) {
+        if (item > 5) break
+        println(item)
+    }
+
+    val scanner: Scanner = Scanner(System.`in`)
+    print("Enter Number : ")
+    val num: Int = scanner.nextInt()
+    var factorial: Int = 1
+    for (item in num downTo 1) {
+        factorial *= item
+    }
+
+    println("factorial of $num = $factorial")
 
 }
