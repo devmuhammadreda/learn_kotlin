@@ -6,7 +6,7 @@ fun main() {
     microwave.turnOn()
     microwave.startMicrowave()
     val keyboard = Keyboard("Mechanical")
-    val computer = Computer("LG", keyboard = keyboard)
+    val computer = Computer(keyboard = keyboard)
     computer.typeText("welcome Reda")
 
 }
@@ -43,7 +43,7 @@ class Keyboard(val type: String) {
     }
 }
 
-class Computer(brand: String, val keyboard: Keyboard) {
+class Computer(val keyboard: Keyboard) {
     fun typeText(text: String) {
         println("start typing in Keyboard ${keyboard.type}")
         text.forEach { keyboard.pressKey(it.toString()) }
